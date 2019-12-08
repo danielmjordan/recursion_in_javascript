@@ -11,16 +11,21 @@
 // left over, implement an iterative solution.
 
 // example usage:
-// nthFibonacci(2); // => 1   0, 1
-// nthFibonacci(3); // => 2   0, 1, 1
-// nthFibonacci(4); // => 3   0, 1, 1, 2
+// nthFibonacci(2); // => 1   0, 1, 1
+// nthFibonacci(3); // => 2   0, 1, 1, 3
+// nthFibonacci(4); // => 3   0, 1, 1, 2, 3
+// nthFibonacci(5); // => 5   0, 1, 1, 2, 3, 5
+// nthFibonacci(6); // => 8   0, 1, 1, 2, 3, 5, 8
 // etc...
 
 var nthFibonacci = function(n) {
   // Your code here
 
-
-
+  if (n < 2) {
+    return n;
+  } else {
+    return nthFibonacci(n - 2) + nthFibonacci(n - 1);
+  }
 
 };
 
